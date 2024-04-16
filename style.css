@@ -1,0 +1,244 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #ffff;
+}
+
+.navbar a {
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  font-weight: 200;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 550;
+  word-spacing: 0.5vmax;
+  transition: all 0.5s;
+}
+
+.navbar a:hover {
+  color: #383232;
+}
+
+.book-btn {
+  height: 10vh;
+  width: 8vw;
+  background-color: #e84b44;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.slider {
+  width: 90%;
+  height: 60vh;
+  margin: auto;
+  background-image: url("https://cdn.pixabay.com/photo/2018/01/26/08/37/architecture-3108075_1280.jpg");
+  background-size: 100% 100%;
+  animation: imgSlider 20s linear infinite;
+}
+
+@keyframes imgSlider {
+  0% {
+    background-image: url("https://cdn.pixabay.com/photo/2014/08/03/23/41/house-409451_1280.jpg");
+  }
+
+  50% {
+    background-image: url("https://cdn.pixabay.com/photo/2017/07/17/00/54/house-2511060_1280.jpg");
+  }
+
+  75% {
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg");
+  }
+}
+
+.content div {
+  width: 70% auto;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -5rem;
+}
+
+.content div > h1 {
+  font-size: 2rem;
+}
+
+.content div hr {
+  width: 8%;
+  height: 0.2vmax;
+  margin-top: 2rem;
+  color: #e84b44;
+  background: #e84b44;
+}
+
+.content div p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 60%;
+  line-height: 1.3rem;
+}
+
+#plus-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -12rem;
+}
+
+.hero {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: -8rem;
+}
+
+.hero img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  /* padding: 1.5rem 9%; */
+  /* background: #1e2744; */
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.footer-logo {
+  flex: 20%;
+  background: #e84b44;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 70%;
+  font-size: 1rem;
+  color: white;
+  background: #1e2744;
+  padding: 20px;
+}
+
+.footer-text li {
+  list-style: none;
+  padding: 0.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.footer-text li:hover {
+  color: #9b9ca0;
+}
+
+@media (max-width: 1200) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem solid rgba(0, 0, 0, -2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, -2);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem auto;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content h3 {
+    font-size: 2.6rem;
+  }
+
+  .content h1 {
+    font-size: 5rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 90vw;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    width: 80vw;
+    margin-top: 8rem;
+  }
+
+  /* .about-image img {
+    width: 100vw;
+    margin-top: 4rem;
+  } */
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
